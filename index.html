@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Grillhaus.png" type="image/x-icon">
+    <link rel="stylesheet" href="styleHeadFooter.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="impressum.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="dropDownMenu.js"></script>
+    <script src="responsive.js"></script>
+    <script src="includeArraysSave.js"></script>
+    <script src="tamplateHTML.js"></script>
+    <script src="script.js"></script>
+    <script src="readMore.js"></script>
+    <title>LieferDir.de</title>
+
+
+</head>
+
+<body id="blockContent" onload="includeHTML(), render()">
+    <!--Hier header-->
+    <div w3-include-html="templates/header.html"></div>
+    <div class="define">
+        <!--Hier Hidde-Button-Info fenster-->
+        <div w3-include-html="templates/infoBox.html"></div>
+        <!--Ab hier MainCointainer-->
+        <div id="mediaMainCointainer" class="mainCountainer">
+            <img class="poster" src="img/poster.jpg">
+            <div class="paddLsRs18">
+                <div class="_1kB1uC">
+                    <div class="sellerCountainer">
+                        <div id="sellerImgPosi">
+                            <img id="sellerImg" src="img/Grillhaus.png" class="sellerImg">
+                        </div>
+                        <!--Hier Button-love Reaktion-->
+                        <div id="buttonCountainer" class="buttonCountainer">
+                            <div id="bttnCountainerPosi" class="bttnCountainerPosi"> 
+                                <button id="btnHeart" onclick="addLove()" class="buttonInfo"><img id="loveChange" src="icon/heart.png" class="buttonImgAdd">
+                                </button>
+                                <button id="btnRedHeart" onclick="removeLove()" class="buttonInfo d-none"><img id="loveChange" src="icon/heartOn.png" class="buttonImgAdd">
+                                </button>
+                                <!--Hier Button-Info fenster-->
+                                <button onclick="showInfo()" class="buttonInfo">
+                                    <img src="icon/info.png" class="buttonImgAdd">
+                                </button>
+                            </div>
+                            <!--Ab hier subMain-->
+                            <div class="column">
+                                <h1>
+                                    <p>Davide's Grillhouse</p>
+                                </h1>
+                                <!--bewerte funktion-->
+                                <div class="rate">
+                                    <p>Bewerten</p>
+                                    <input type="radio" id="star5" name="rate" value="5" />
+                                    <label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" />
+                                    <label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" />
+                                    <label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1" />
+                                    <label for="star1" title="text">1 star</label>
+                                </div>
+                                <!--Bestell Info-->
+                                <div class="sellerAtb">
+                                    <p class="atb">
+                                        <img src="icon/clock.png" class="logoSeller1"> 20-45 Min.
+                                    </p> &bull;
+                                    <p class="atb">
+                                        <img src="icon/car.png" class="logoSeller"> 5,00€
+                                    </p> &bull;
+                                    <p class="atb">
+                                        <img src="icon/bag.png" class="logoSeller"> Mind. 20,00€
+                                    </p>
+                                    <p class="point">&bull;</p>
+                                    <p class="atbGreen"><img src="icon/ckeck.png" class="logoSeller2" id="atbGeen">
+                                        Kostenlose Lieferung ab 40,00€</p>
+                                </div>
+                                <!--Verkäufer text bereich-->
+                                <div w3-include-html="templates/sellerWrite.html"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--scrool smoove bereich-->
+                    <div id="scrollMenuNone" class="_1kB1uC navBar">
+                        <div id="scrollMenue" class="scrollmenu">
+                            <a href="#courtPopular">Beliebte Gerichte</a>
+                            <a href="#courtSalat">Salat</a>
+                            <a href="#courtBurger">Burger</a>
+                            <a href="#courtPasta">Pasta</a>
+                            <a href="#courtPizza">Pizza</a>
+                            <a href="#courtGetränke">Getränke</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Ab hier Alle Gerichte-->
+            <div class="shadowBottom "></div>
+            <div class="paddLsRs18">
+                <!--hier kommt d-none-->
+                <div id="courtPopular" class="courtsCountainer _1kB1uC">
+                </div>
+
+                <div> <img class="_1kB1uC courtImgSize" src="img/salat.jpg">
+                </div>
+
+                <div id="courtSalat" class="courtsCountainer _1kB1uC">
+                </div>
+                <div> <img class="_1kB1uC courtImgSize" src="img/burger.jpg"></div>
+                <div id="courtBurger" class="courtsCountainer _1kB1uC">
+                </div>
+
+                <div> <img class="_1kB1uC courtImgSize" src="img/pasta.jpg"></div>
+                <div id="courtPasta" class="courtsCountainer _1kB1uC">
+                </div>
+
+                <div> <img class="_1kB1uC courtImgSize" src="img/pizza.jpg"></div>
+                <div id="courtPizza" class="courtsCountainer _1kB1uC">
+                </div>
+
+                <div> <img class="_1kB1uC courtImgSize" src="img/getränke.jpg"></div>
+                <div id="courtGetränke" class="courtsCountainer _1kB1uC">
+                </div>
+            </div>
+        </div>
+        <!--Basket Button für Responsive-->
+        <div id="basketButtonCountainer" class="basketButtonCountainer d-none slide-in-bottom">
+            <button id="openBasket" onclick="openBasket()" class="payButtonRe">
+                    <h3>
+                        <div class="textWhite" id="totalShowBasket">Warenkorb</div>
+                    </h3>
+            </button>
+        </div>
+        <!--Ab Hier Warenkorb-->
+        <div id="mediaBasket" class="shadowLeftRe shadowLeft aSideRe aSide slide-in-bottom">
+            <div id="fixed" class="fixed">
+                <div class="center">
+                    <h2>
+                        Warenkorb
+                    </h2>
+                </div>
+                <div class="basketScroll" id="basket"></div>
+                <div id="deliverCostInfo" class="paddLsRs18"></div>
+                <div id="extraCostInfo" class="paddLsRs18"></div>
+            </div>
+        </div>
+    </div>
+    <!--Ab hier footer-->
+    <div w3-include-html="templates/footer.html"></div>
+</body>
+
+</html>
